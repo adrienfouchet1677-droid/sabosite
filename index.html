@@ -1,0 +1,54 @@
+HTML:
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Saisie Rapide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <h1>⚡ Jeu de Saisie Rapide ⚡</h1>
+        <div id="game-stats">
+            <span>Score: <strong id="score">0</strong></span>
+            <span>Temps: <strong id="timer">30</strong>s</span>
+            <button id="start-game">Commencer</button>
+        </div>
+    </div>
+
+    <div id="instructions">
+        <p><strong>Règles :</strong> Tapez rapidement les lettres qui apparaissent ! Vous avez 30 secondes.</p>
+        <p><em>Observez les informations clavier qui s'affichent à chaque frappe.</em></p>
+    </div>
+
+    <div id="game-area">
+        <div id="target-letter">
+            <span id="letter-display">A</span>
+            <div id="letter-info">Appuyez sur cette lettre !</div>
+        </div>
+    </div>
+
+    <div id="keyboard-info">
+        <h3>⌨️ Informations de la dernière frappe</h3>
+        <div class="info-row">
+            <span class="info-label">event.key:</span>
+            <span id="current-key">-</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">event.code:</span>
+            <span id="current-code">-</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">event.keyCode:</span>
+            <span id="current-keycode">-</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Résultat:</span>
+            <span id="result-status">En attente...</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
